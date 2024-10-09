@@ -7,7 +7,7 @@ print(x)
 
 print(bin(20))
 
-print(bool(None))
+print(bool("Hello"))
 print(bytearray(4))
 
 print(chr(89))
@@ -46,7 +46,13 @@ print(a[x])
 x = round(5.76543, 2)
 print(x) 
 
+x = pow(4, 3, 5) 
+print(x)
+
 alph = ["a", "b", "c", "d"]
 ralph = reversed(alph)
 for x in ralph:
   print(x) 
+
+  print("Hello", "how are you?", sep="---",end=" ")
+  print("Hello World")
