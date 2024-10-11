@@ -54,5 +54,5 @@ ralph = reversed(alph)
 for x in ralph:
   print(x) 
 
-  print("Hello", "how are you?", sep="---",end=" ")
-  print("Hello World")
+print("Hello", "how are you?", sep="---",end=" ")
+print("Hello World")
