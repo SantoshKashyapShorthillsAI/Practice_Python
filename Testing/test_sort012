@@ -1,0 +1,47 @@
+import pytest
+
+# Import the sort012 function
+from src.sort012 import *
+
+@pytest.mark.parametrize("input_array, expected_output", [
+    # Test Case 1: General Case
+    ([0, 1, 1, 0, 1, 2, 1, 2, 0, 0, 0, 1], [0, 0, 0, 0, 1, 1, 1, 1, 1, 2, 2, 2]),
+    
+    # Test Case 2: Already sorted array
+    ([0, 0, 0, 1, 1, 1, 2, 2], [0, 0, 0, 1, 1, 1, 2, 2]),
+    
+    # Test Case 3: All elements are 0
+    ([0, 0, 0, 0], [0, 0, 0, 0]),
+    
+    # Test Case 4: All elements are 1
+    ([1, 1, 1, 1], [1, 1, 1, 1]),
+    
+    # Test Case 5: All elements are 2
+    ([2, 2, 2, 2], [2, 2, 2, 2]),
+    
+    # Test Case 6: Mix of 0 and 1 only
+    ([1, 0, 1, 0, 0, 1], [0, 0, 0, 1, 1, 1]),
+    
+    # Test Case 7: Mix of 1 and 2 only
+    ([1, 2, 1, 2, 2, 1], [1, 1, 1, 2, 2, 2]),
+    
+    # Test Case 8: Mix of 0 and 2 only
+    ([0, 2, 2, 0, 2, 0], [0, 0, 0, 2, 2, 2]),
+    
+    # Test Case 9: Single element array with 0
+    ([0], [0]),
+    
+    # Test Case 10: Single element array with 1
+    ([1], [1]),
+    
+    # Test Case 11: Single element array with 2
+    ([2], [2]),
+    
+    # Test Case 12: Empty array
+    ([], []),
+    
+    # Test Case 13: Array with equal number of 0, 1, and 2
+    ([0, 1, 2, 0, 1, 2, 0, 1, 2], [0, 0, 0, 1, 1, 1, 2, 2, 2]),
+])
+def test_sort012(input_array, expected_output):
+    assert sort012(input_array, len(input_array)) == expected_output
