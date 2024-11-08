@@ -5,11 +5,11 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 import time
 
-# Define the path to the Edge WebDriver
-service = Service("/home/shtlp_0103/WebDrivers/msedgedriver.exe")
+# # Define the path to the Edge WebDriver
+# service = Service("/home/shtlp_0103/WebDrivers/chromedriver")
 
 # Initialize the Edge browser using the service
-driver = webdriver.Edge(service=service)
+driver = webdriver.Chrome()
 
 # Open the URL
 driver.get("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login")
