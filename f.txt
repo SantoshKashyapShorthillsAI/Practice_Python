@@ -27,6 +27,3 @@ Selenium_Python
 src
 string_format.py
 string_indexing.py
-Testing
-typecheck.py
-Unpacking.py
